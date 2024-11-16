@@ -607,4 +607,12 @@ hr {
   .OrderConfirmed {
     width: 85%;
   }
+  .price {
+    gap: 8rem;
+  }
+  .ads {
+    width: 78%;
+    font-size: 12px;
+    padding: 0.8rem 2.5rem;
+  }
 }
