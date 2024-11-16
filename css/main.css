@@ -1,0 +1,610 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(14, 25%, 72%) hsl(13, 31%, 94%);
+}
+
+/* Define custom Sass variables for colors */
+/* Global styles */
+body {
+  background-color: hsl(13, 31%, 94%);
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.img-added {
+  border: 2px solid #c73a0f;
+}
+
+.container {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+}
+
+.left-prj {
+  margin-left: 10rem;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+/* Title styling */
+.title {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+/* Project list grid layout */
+.prj-list {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem 1.5rem;
+  width: 100%;
+}
+
+.product:hover .img img {
+  -webkit-transform: scale(1.1) rotate(4deg);
+          transform: scale(1.1) rotate(4deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Product image styling */
+.product > .img {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.product > .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.product > .img > button {
+  border: 1px solid hsl(14, 86%, 42%);
+  border-radius: 100vh;
+  background-color: hsl(20, 50%, 98%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  width: 10rem;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  -webkit-transform: translate(35px, -50%);
+          transform: translate(35px, -50%);
+  cursor: pointer;
+}
+.product > .img > button:hover {
+  color: #c73a0f;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 1px 1px 15px -5px;
+          box-shadow: 1px 1px 15px -5px;
+}
+
+.product > .AddToCart {
+  border: 1px solid hsl(14, 86%, 42%);
+  border-radius: 100vh;
+  background-color: hsl(20, 50%, 98%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  width: 10rem;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  -webkit-transform: translate(35px, -50%);
+          transform: translate(35px, -50%);
+  cursor: pointer;
+  position: relative;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+}
+.product > .AddToCart:hover {
+  color: #c73a0f;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 1px 1px 15px -5px;
+          box-shadow: 1px 1px 15px -5px;
+  border-radius: 100vh;
+}
+
+.product p {
+  color: #c73a0f;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.product > span {
+  color: hsl(12, 20%, 44%);
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.product > h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(14, 65%, 9%);
+  margin: 7px 0;
+}
+
+.your-card {
+  width: 45%;
+  margin-right: 10rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: sticky;
+  top: 8rem;
+  max-height: calc(100dvh - 7rem);
+}
+.your-card .title-card {
+  font-size: 1.5rem;
+  color: #c73a0f;
+  text-align: center;
+  margin-top: 1rem;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+.your-card .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart .p-CartSection {
+  color: hsl(12, 20%, 44%);
+  font-weight: 500;
+}
+
+.DisplayCart > h5 {
+  margin: 0;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 12.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 1px solid hsl(13, 31%, 94%);
+  margin-bottom: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+}
+.flex > :first-child {
+  color: #c73a0f;
+}
+.flex > * {
+  font-weight: 600;
+  color: hsl(12, 20%, 44%);
+}
+.flex > :nth-child(2) {
+  font-weight: 400;
+}
+
+.remove {
+  border: 1px solid hsl(12, 20%, 44%);
+  border-radius: 50%;
+  width: 1.8rem;
+  aspect-ratio: 1;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+.remove:hover {
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+}
+
+.orderTotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.orderTotal > :last-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.ads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: hsl(13, 29%, 94%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.3rem 3.3rem;
+  border-radius: 12px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.ads img {
+  padding-right: 0.4rem;
+}
+
+.confirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.confirm > button {
+  background-color: #c73a0f;
+  color: hsl(13, 31%, 94%);
+  padding: 0.75rem 2rem;
+  border-radius: 100vh;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+.confirm > button:hover {
+  -webkit-filter: contrast(1.3);
+          filter: contrast(1.3);
+}
+
+section {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.5rem;
+  padding: 2rem 0 0;
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  z-index: 999;
+  place-content: center;
+  pointer-events: all;
+  visibility: hidden;
+}
+
+.OrderConfirmed {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40rem;
+  max-height: 100%;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.OrderConfirmed > img {
+  width: 3rem;
+}
+.OrderConfirmed > h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(14, 65%, 9%);
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+.OrderConfirmed > p {
+  color: hsl(12, 20%, 44%);
+  font-size: 1rem;
+  margin: 0;
+}
+.OrderConfirmed > button {
+  background-color: #c73a0f;
+  color: #f4edeb;
+  padding: 0.75rem 2rem;
+  border-radius: 100vh;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.OrderConfirmed > button:hover {
+  -webkit-filter: contrast(1.3);
+          filter: contrast(1.3);
+}
+
+.OrderContainer {
+  background-color: hsl(13, 29%, 94%);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-block: 1.5rem;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.OrderContainer > .containerTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  overflow: auto;
+  padding-right: 0.5rem;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  opacity: 4;
+  width: 100%;
+  background-color: hsla(12, 20%, 44%, 0.27);
+}
+
+.ordertitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+.ordertitle > img {
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 0.25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+.ordertitle > .orderName > :first-child {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: hsl(14, 65%, 9%);
+}
+.ordertitle > .orderName > :nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  color: #c73a0f;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+.ordertitle > .orderName > :nth-child(2) > :last-child {
+  color: hsl(12, 20%, 44%);
+}
+.ordertitle > .orderPrice {
+  color: hsl(14, 65%, 9%);
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.orderConfiTotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: hsl(14, 65%, 9%);
+  font-size: 0.9rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-block: 1.5rem 0.5rem;
+}
+.orderConfiTotal > :last-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.AddToCartPlus {
+  background-color: #c73a0f;
+  color: #fff;
+  cursor: auto;
+  border-radius: 100vh;
+  gap: 0.5rem;
+  width: 10rem;
+  min-height: 2.75rem;
+  position: relative;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.AddToCartPlus:hover {
+  /* color: #c73a0f; */
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 1px 1px 15px -5px;
+          box-shadow: 1px 1px 15px -5px;
+}
+
+.decrement,
+.increment {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: transparent;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.decrement:hover,
+.increment:hover {
+  background-color: #fff;
+}
+.decrement:hover img,
+.increment:hover img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 4.5rem;
+  }
+  .container > .left-prj {
+    margin: auto;
+    width: 88%;
+    margin-top: 0px;
+    margin-bottom: 3rem;
+  }
+  .container > .your-card {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .cart {
+    width: 100%;
+  }
+  .DisplayCart {
+    width: 100%;
+  }
+  .OrderConfirmed {
+    width: 85%;
+  }
+}

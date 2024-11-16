@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Product list with cart</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="left-prj">
+        <h2 class="title">Desserts</h2>
+        <div id="product-list" class="prj-list">
+          <!-- Products will be inserted here by JavaScript -->
+        </div>
+      </div>
+
+      <!-- cart section -->
+      <div class="your-card">
+        <h4 class="title-card">
+          Your Cart <span class="cart-count">(0)</span>
+        </h4>
+        <div class="cart">
+          <div class="img">
+            <img
+              class="img-CartSection"
+              src="./assets/images/illustration-empty-cart.svg"
+              alt=""
+            />
+          </div>
+          <p class="p-CartSection">Your added items will appear here</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Order confirmed section -->
+    <section>
+      <div class="OrderConfirmed">
+        <img src="./assets/images/icon-order-confirmed.svg" alt="" />
+        <h3>Order Confirmed</h3>
+        <p>We hope you enjoy your food!</p>
+        <div class="OrderContainer">
+
+          <div class="containerTitle">
+            <div class="ordertitle">
+              <img src="" alt="" />
+              <div class="orderName">
+                <div></div>
+                <div class="orderQuantity">
+                  
+                  <span></span>
+                </div>
+              </div>
+              <div class="orderPrice"></div>
+            </div>
+          </div>
+
+
+          <div class="orderConfiTotal">
+            <p>Order Total</p>
+            <div>$6.00</div>
+          </div>
+        </div>
+        <button class="startNewOrderButton">Start New Order</button>
+      </div>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
